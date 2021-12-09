@@ -52,7 +52,7 @@ Requisitos cumplidos por el proyecto.
 - Cuerpos de pagina(body) ✔
 - Tecnología mínima ✔
 - NodeJS ✔
-- MongoDB (falta get para mostrar tabla) ✔
+- MongoDB ✔
 - Bootstrap 5 ✔
 - Google Fonts  ✔
 - Iconos ( libre elección) ✔
