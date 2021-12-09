@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Lobster&family=Noto+Serif&family=Sniglet&display=swap');
+
+:root{
+    --Lobster:"Lobster",cursive;
+}
+
+body{ 
+    background: #8B039A;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(fondocursos.jpeg); 
+    font-family: "Roboto",sans-serif;
+ }

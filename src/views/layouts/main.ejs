@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title></title>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Lobster&family=Noto+Serif&family=Sniglet&display=swap" rel="stylesheet">
+
+    <!--Boxicons-->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="../../public/footer.css" type="Text/css">
+    
+    <!-- CSS  -->
+    <link rel="stylesheet" href="../../public/profile.css" class="menuIMG" type="Text/css">
+</head>
+<body>
+    <!--ENCABEZADO-->
+    <header>
+        <!-- <b class="container-fluid bg-grey d-flex justify-content-center text-white" >Academia EDUK</b> -->
+         <!-- <div class="text-center">
+          <img src="../../public/newshield.png" width="48" alt="">
+        </div>  -->
+         <!--Barra de Navegacion-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark p-3" id="menu">
+          <div class="container-fluid">
+            <div class="text-center">
+              <img src="../../public/logo_grey.png" width="48" alt="">
+            </div>
+            <a class="navbar-brand" href="" >    </a>
+            <a class="navbar-brand" href="../cursos" style="color:#ffffff">Inicio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="../profile" style="color:#ffffff">Perfil</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="./profesores" style="color:#ffffff">Profesores</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="./contacto" style="color:#ffffff">Contacto</a>
+                </li>
+                
+                
+                
+              
+              <!-- <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="correo electronico" aria-label="email">
+                <button class="btn btn-primary btn-primary-success" type="submit">Suscribete</button>
+              </form> -->
+            </div>
+          </div>
+        </nav>
+   
+    </header>
+
+    
+
+       <!-- NAVIGATION -->
+  <!-- <% if (!user) { %>
+    <a href="/signin">Signin</a>
+    <a href="/signup">Signup</a>
+    <% } else { %>
+    <a href="/logout">Logout</a>
+    <a href="/profile">Profile</a>
+    <% } %> -->
+  
+    <%if (signinMessage) {%>
+      <p><%= signinMessage %></p>
+    <% } %>
+    <%if (signupMessage) {%>
+      <p><%= signupMessage %></p>
+    <% } %>
+  
+    <%- body %>
+
+
+ <!-- </body>
+</html> -->

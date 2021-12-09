@@ -1,0 +1,228 @@
+<%- layout('layouts/main.ejs') %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--Boxicons-->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+  <!--CSS-->
+  <link rel="stylesheet" href="../public/cursos/cursos.css" type="Text/css">
+    <title>Cursos</title>
+    <style>
+        .bxl-python{
+          font-size: 250px;
+        }
+        .bxl-javascript{
+          font-size: 250px;
+        }
+        .bxl-angular{
+          font-size: 250px;
+        }
+        .bxl-c-plus-plus{
+          font-size: 250px;
+        }
+        .bx-import{
+          font-size: 52px;
+        }
+        .bx-question-mark{
+          font-size: 52px;
+        }
+        .bx-video-recording{
+          font-size: 52px;
+        }
+        .bxl-visual-studio{
+          font-size: 52px;
+        }
+        .bx-bar-chart-alt-2{
+          font-size: 52px;
+        }
+        .portada{
+          width: 745px;
+          height: 410px;
+        }
+        .cursoimg{
+          width: 300px;
+          height: 250px;
+        }
+      </style>
+</head>
+
+<body>
+
+
+    <!--Imagen de presentacion-->
+    <div class="hero vh-100 d-flex align-items-center" id="inicio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 mx-auto text-center">
+                    <img src="../public/login.jpeg" class="portada" alt="">
+                    <h1 class="display-4 text-decoration  bg-dark  text-white">Bienvenido a E-duk</h1>
+                    <h5 class="text-decoration color black my-3" style="color:#ffffff">Capacitate en Tecnología</h5>
+                    <p style="color:#ffffff"> <br> <br> <br>Dale un vistazo a nuestros cursos</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin de Imagen de presentacion-->
+
+
+    <!--secciones de productos-->
+    <section id="Lista_Productos">
+      <div class="container">
+          <div class="row mb-5"> 
+                          
+          </div>
+       
+          <table>
+            <tr>
+              <td>
+                <div class="col-lg-3 col-sm-3">
+                  <div class="card bg-dark" style="width: 40rem;">
+                      <!-- <i class='bx bxl-javascript' ></i> -->
+                      <img src="../public/cursos/javascript.png" class="cursoimg " alt="">
+                      <div class="card-body">
+                        <h6 class="card-title" style="color:#ffffff">Master en Javascript</h6>
+                        <p class="card-text" style="color:#ffffff">Especialízate en Frontend por solo $200 MXN</p>
+                        <form action="/cursos" method="post">
+                          <select class="form-select" aria-label="Default select example" method="post" type="text" name="paymethod" required>
+                            <option selected>Método de compra</option>
+                            <option value="Tarjeta">Tarjeta</option>
+                            <option value="Depósito">Depósito</option>
+                            <option value="PayPal">PayPal</option>
+                          </select>
+                          <input method="post" type="email" name="email" placeholder="E-mail" value="<%= user.email %> " hidden>
+                          <input method="post" type="text" name="nombre" placeholder="nombre" value="Javascript" hidden>
+                          <input method="post" type="text" name="costo" placeholder="costo" value="200" hidden>
+                          <!-- <input method="post" type="text" name="paymethod" placeholder="Método de pago"> -->
+                          <button bg-dark text-white>Comprar</button>
+                          <a style="color:#ffffff" href="cursoJavascript">Echar un vistazo</a>
+                        </form>
+                      </div>
+                  </div>                      
+              </div>
+
+              <div class="col-lg-3 col-sm-3">
+                  <div class="card bg-dark" style="width: 40rem;">
+                      <!-- <i class='bx bxl-angular'></i> -->
+                      <img src="../public/cursos/meanstack.jpg" class="cursoimg " alt="">
+                      <div class="card-body">
+                        <h6 class="card-title" style="color:#ffffff">MEAN stack</h6>
+                        <p class="card-text" style="color:#ffffff">Vuélvete FullStack por solo $400 MXN</p>
+                        <form action="/cursos" method="post">
+                          <select class="form-select" aria-label="Default select example" method="post" type="text" name="paymethod" required>
+                            <option selected>Método de compra</option>
+                            <option value="Tarjeta">Tarjeta</option>
+                            <option value="Depósito">Depósito</option>
+                            <option value="PayPal">PayPal</option>
+                          </select>
+                          <input method="post" type="email" name="email" placeholder="E-mail" value="<%= user.email %> " hidden>
+                          <input method="post" type="text" name="nombre" placeholder="nombre" value="MEAN" hidden>
+                          <input method="post" type="text" name="costo" placeholder="costo" value="400" hidden>
+                          <!-- <input method="post" type="text" name="paymethod" placeholder="Método de pago"> -->
+                          <button bg-dark text-white>Comprar</button>
+                          <a style="color:#ffffff" href="cursoMEAN">Echar un vistazo</a>
+                        </form>
+                      </div>
+                  </div>                       
+              </div>
+
+          <td>
+
+
+
+
+          <td>
+            
+                  <div class="col-lg-3 col-sm-3">
+                    <div class="card bg-dark" style="width: 40rem;">
+                        <img src="../public/cursos/cpp.png" class="cursoimg " alt="">
+                        <!-- <i class='bx bxl-c-plus-plus' ></i> --> 
+                        <div class="card-body">
+                          <h6 class="card-title" style="color:#ffffff">C++</h6>
+                          <p class="card-text" style="color:#ffffff">Aprende programación desde cero por solo $100 MXN</p>
+                          <form action="/cursos" method="post">
+                            <select class="form-select" aria-label="Default select example" method="post" type="text" name="paymethod" required>
+                              <option selected>Método de compra</option>
+                              <option value="Tarjeta">Tarjeta</option>
+                              <option value="Depósito">Depósito</option>
+                              <option value="PayPal">PayPal</option>
+                            </select>
+                            <input method="post" type="email" name="email" placeholder="E-mail" value="<%= user.email %> " hidden>
+                            <input method="post" type="text" name="nombre" placeholder="nombre" value="Cpp" hidden>
+                            <input method="post" type="text" name="costo" placeholder="costo" value="100" hidden>
+                            <!-- <input method="post" type="text" name="paymethod" placeholder="Método de pago"> -->
+                            <button bg-dark text-white>Comprar</button>
+                            <a style="color:#ffffff" href="cursoCpp">Echar un vistazo</a>
+                          </form>
+                        </div>
+                    </div>                                     
+                </div>
+
+                <div class="row g-4">                                  
+                  <div class="col-lg-6 col-sm-6">
+                      <div class="card bg-dark" style="width: 40rem;">
+                          <!-- <i class='bx bxl-python'></i>   -->
+                          <img src="../public/cursos/python.png" class="cursoimg " alt="">
+                          <div class="card-body">
+                            <h6 class="card-title" style="color:#ffffff">Python</h6>
+                            <p  class="card-text" style="color:#ffffff">Conoce al lenguaje más poular del momento y todo su poder por solo $250 MXN</p>
+                            <form action="/cursos" method="post">
+                              <select class="form-select" aria-label="Default select example" method="post" type="text" name="paymethod" required>
+                                <option selected>Método de compra</option>
+                                <option value="Tarjeta">Tarjeta</option>
+                                <option value="Depósito">Depósito</option>
+                                <option value="PayPal">PayPal</option>
+                              </select>
+                              <input method="post" type="email" name="email" placeholder="E-mail" value="<%= user.email %> " hidden>
+                              <input method="post" type="text" name="nombre" placeholder="nombre" value="Python" hidden>
+                              <input method="post" type="text" name="costo" placeholder="costo" value="250" hidden>
+                              <!-- <input method="post" type="text" name="paymethod" placeholder="Método de pago"> -->
+                              <button bg-dark text-white>Comprar</button>
+                              <a style="color:#ffffff" href="cursoPython">Echar un vistazo</a>
+                            </form>
+                          </div>
+                      </div>                      
+                  </div>
+              </div> 
+          
+          <td>
+            </tr>
+          </table>
+
+         
+
+
+
+    </section>
+    <!--Fin secciones de productos-->
+
+    <footer>
+      <div class="footer-content">
+          <h3>E-duk</h3>
+          <p>Contáctenos al teléfono 445 101 8830</p>
+          <p>Correo: gabrieltorres9909@gmail.com</p>
+          <ul class="socials">
+              <li><a href="https://www.instagram.com/gabrielletorricelli/"><i class="bx bxl-instagram"></i></a></li>
+              <li><a href="https://twitter.com/GabrielleTorri1"><i class="bx bxl-twitter"></i></a></li>
+              <li><a href="https://www.youtube.com/channel/UCidGV1EU-QJ9HyUrVUd_W8w"><i class="bx bxl-youtube"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/gabriel-alberto-torres-mendoza-36276b1b0/"><i class="bx bxl-linkedin-square"></i></a></li>
+          </ul>
+      </div>
+      <div class="footer-bottom">
+          <p>copyright &copy;2021 E-duk. App construida por  <span>Garbriel Alberto Torres Mendoza</span></p>
+      </div>
+  </footer>
+
+
+    <!--JS Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+   
+    </body> 
+
+    

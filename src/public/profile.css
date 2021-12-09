@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Lobster&family=Noto+Serif&family=Sniglet&display=swap');
+
+:root{
+    --Sniglet-font:"Sniglet",cursive;
+    --Lobster:"Lobster",cursive;
+    --Noto-Serif:"Noto-Serif",cursive;
+    --Acme:"Acme",cursive;
+}
+
+.header{
+    font-family: var(--Lobster);
+}
+
+body{ 
+    /* background-image: url(login.jpeg); */
+   
+    background: #8B039A;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(login.jpeg); */
+    font-family: "Roboto",sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+ }
+.bg{
+    background: #CD19E1;
+}
+.card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+}
+header .nav-item:last-child{
+    padding-right: 10.5em;
+}
+
+.menuIMG{
+    height: 95px;
+    width: 170px;
+}
