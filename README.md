@@ -1,6 +1,6 @@
 # Proyecto E-duk (WebApp Academia)
 
-Proyecto final de la materia de Desarrollo de Software.
+Proyecto final para la materia de Desarrollo de Software impartida por el Mtro. Tarsicio Ramos Lemus de la Universidad de Guanajuato.
 
 Mediante el aplicativo el usuario podrá visualizar una introducción de los cursos ofrecidos por la academia, así como comprarlos si le convencen y consumir los 
 cursos (solo los comprados) en la misma plataforma, además de poder conocer a los profesores que imparten los cursos y mantener contacto direto con la empresa/particular
@@ -38,3 +38,22 @@ Contacto:
 La vista de contacto solo contendrá dos formularios, el primero uno muy importante, un formulario de contacto, para que el usuario pueda dar feedback a la empresa que
 ofrece los cursos, así como consultar dudas. El segundo formulario le permitirá tener una subscripción para recibir de manera periódica artículos, información y 
 actualizaciónes sobre los cursos y la empresa que podría no necesitar o no querer.
+
+
+Requisitos cumplidos por el proyecto.
+
+- *Login ✔*
+- Clave encriptada ✔
+- Manejo de sessions ✔
+- Mínimo 5 secciones transaccionales ✔
+- Menu (navbar) ✔
+- Encabezados(header) ✔
+- Pies de pagina(footer)✔
+- Cuerpos de pagina(body) ✔
+- Tecnología mínima ✔
+- NodeJS ✔
+- MongoDB (falta get para mostrar tabla) ✔
+- Bootstrap 5 ✔
+- Google Fonts  ✔
+- Iconos ( libre elección) ✔
+- Docker(opcional) ✔
