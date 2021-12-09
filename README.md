@@ -2,6 +2,9 @@
 
 Proyecto final para la materia de Desarrollo de Software impartida por el Mtro. Tarsicio Ramos Lemus de la Universidad de Guanajuato.
 
+
+Situación planteada para el aplicativo: Web App ofrecida a empresas y particulares que quieran ofrecer sus cursos en línea a sus clientes de la mejor manera y brindarles la mejor experiencia.
+
 Mediante el aplicativo el usuario podrá visualizar una introducción de los cursos ofrecidos por la academia, así como comprarlos si le convencen y consumir los 
 cursos (solo los comprados) en la misma plataforma, además de poder conocer a los profesores que imparten los cursos y mantener contacto direto con la empresa/particular
 que ofrece los cursos, pudiendo escribirle mensajes y enviarle feedback, finalmente podrá también suscribirse para recibir artículos, información y actualizaciones.
