@@ -4,7 +4,7 @@ Proyecto final de la materia de Desarrollo de Software.
 
 Mediante el aplicativo el usuario podrá visualizar una introducción de los cursos ofrecidos por la academia, así como comprarlos si le convencen y consumir los 
 cursos (solo los comprados) en la misma plataforma, además de poder conocer a los profesores que imparten los cursos y mantener contacto direto con la empresa/particular
-que ofrece los cursos, pudiendo escribirle mensajes y enviarle feedback, finalmente podrá también suscribirse para y recibir artículos, información y actualizaciones,.
+que ofrece los cursos, pudiendo escribirle mensajes y enviarle feedback, finalmente podrá también suscribirse para recibir artículos, información y actualizaciones.
 
 El aplicativo manejará 4 vistas accesibles desde el menú situado en el encabezado:
 
@@ -27,7 +27,7 @@ Perfil:
 La vista de perfil contendrá una tabla para visualizar los cursos que el usuario activo ha comprado, dicha tabla se actualizará al momento de comprar un curso nuevo y 
 desde esa misma tabla podrá acceder a los cursos comprados completos.
 
-En esta vista también verá más información sobre la empresa que ofrece los cursos, y cursos que están por venir.
+En esta vista también verá más información sobre la empresa que ofrece los cursos y cursos que están por venir.
 
 Profesores:
 
