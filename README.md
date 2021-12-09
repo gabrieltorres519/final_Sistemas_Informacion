@@ -1,4 +1,4 @@
-# proyecto_node_mongo_final
+# Proyecto E-duk (WebApp Academia)
 
 Proyecto final de la materia de Desarrollo de Software.
 
