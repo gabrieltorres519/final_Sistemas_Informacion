@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Editar Proveedor</title>
+   <link rel="stylesheet" href="../public/Liberia/principal.css"> <!-- Ruta relativa al archivo CSS -->
+   <style>
+      body {
+         font-family: Arial, sans-serif;
+         margin: 0;
+         padding: 20px;
+         box-sizing: border-box;
+      }
+
+      h1 {
+         text-align: center;
+         margin-bottom: 20px;
+      }
+
+      form {
+         max-width: 400px;
+         margin: 0 auto;
+      }
+
+      .form-group {
+         margin-bottom: 20px;
+      }
+
+      .form-label {
+         color: #000000;
+         font-weight: bold;
+      }
+
+      .form-control {
+         width: 100%;
+         padding: 10px;
+         font-size: 16px;
+         border-radius: 4px;
+         border: 1px solid #ccc;
+      }
+
+      button {
+         display: block;
+         width: 100%;
+         padding: 10px;
+         font-size: 16px;
+         font-weight: bold;
+         background-color: #007bff;
+         color: #fff;
+         border: none;
+         border-radius: 4px;
+         cursor: pointer;
+      }
+
+      button:hover {
+         background-color: #0056b3;
+      }
+   </style>
+</head>
+
+<body>
+   <% include layouts/partials/header.ejs %>
+
+   <h1>Pag edit</h1>
+
+   <form action="/editProveedor/<%= specificProv._id %>" method="POST">
+
+
+    <div class="form-group">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" name="nombre" value="<%= specificProv.nombre %>">
+     </div>
+
+     <div class="form-group">
+        <label for="direccion" class="form-label">Dirección</label>
+        <input type="text" class="form-control" name="direccion" value="<%= specificProv.direccion %>">
+     </div>
+
+     <div class="form-group">
+        <label for="telefono" class="form-label">Teléfono</label>
+        <input type="tel" class="form-control" name="telefono" value="<%= specificProv.telefono %>">
+     </div>
+
+     <div class="form-group">
+        <label for="correo_electronico" class="form-label">Correo Electrónico</label>
+        <input type="email" class="form-control" name="correo_electronico" value="<%= specificProv.correo_electronico %>">
+     </div>
+
+     <button class="btn-submit">Guardar</button>
+
+
+   </form>
+
+
+</body>
+</html>

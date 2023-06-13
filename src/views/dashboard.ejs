@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../public/Liberia/principal.css"> <!-- Ruta relativa al archivo CSS -->
+    <style>
+         .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <% include layouts/partials/header.ejs %>
+    <div class="container">
+        <% include layouts/partials/navbar.EJS %>
+        <div style="text-align: center;">
+            <h1 style="color: #555; margin-bottom: 20px;">Bienvenid@ <%= user.name %> !!</h1>
+            <h6 style="color: #777;"><%= user.email %></h6>
+            <a href="logout" style="display: block; margin-top: 20px; color: #333; text-decoration: none; font-weight: bold;">LogOut</a>
+            <!-- Aquí puedes agregar el contenido adicional de la página de bienvenida -->
+        </div>
+    </div>
+    <% include layouts/partials/footer.ejs %>
+</body>
+</html>
+

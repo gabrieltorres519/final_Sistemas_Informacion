@@ -23,18 +23,8 @@
         <div class="text-center">
           <img src="../public/newshield.png" width="48" alt="">
         </div>
-        <h2 class="fw-bool text-center pt-5 mb-2 bg-dark"  style="color:#ffffff">Bienvenido</h2>
-        <h2 class=" text-center bg-dark"  style="color:#ffffff">Librería Entrelíneas</h2>
-        <h2 class=" text-center " > - </h2>
-        <h2 class="fw-bool text-center pt-6 mb-2" style="color:#000000">SignUp</h2>
+        <h2 class="fw-bool text-center pt-6 mb-2" style="color:#000000">Nuevo Usuario</h2>
 
-          <% if (!user) { %>
-          <a href="/signin" style="color:#000000">LogIn</a>
-          <a href="/signup" style="color:#000000">SignUp</a>
-          <% } else { %>
-          <a href="/logout">Logout</a>
-          <a href="/profile">Profile</a>
-          <% } %>
           
           <%if (signinMessage) {%>
             <p><%= signinMessage %></p>
@@ -44,7 +34,7 @@
           <% } %>
 
            <!-- Formulario del registro -->
-          <form action="#" method="post">
+          <form action="/signup_priv" method="post">
             <!-- <div class="mb-4">
               <label for="name" class="form-label" style="color:#000000">Nombre</label>
               <input type="text" class="form-control" name="name" placeholder="nombre">
@@ -53,7 +43,7 @@
               <label for="email" class="form-label" style="color:#000000">Correo electrónico</label>
               <input type="email" class="form-control" name="email" placeholder="email@email.com">
             </div>
-            <div class="mb-4">
+            <div class="mb-4"> 
               <label for="password" class="form-label" style="color:#000000">Contraseña</label>
               <input type="password" class="form-control" name="password" placeholder="password">
             </div>
@@ -69,7 +59,11 @@
               <label for="profile" class="form-label" style="color:#000000">Perfil</label>
               <input type="text" name="profile" placeholder="Seleccione su tipo de usuario">
           </div> -->
-          <input type="text" name="profile" value="Cliente" hidden>
+          <label for="profile">Perfil</label>
+          <select id="profile" name="profile">
+            <option value="Admin">Admin</option>
+            <option value="Cliente">cliente</option>
+          </select>
 
             <div class="d-grid">
               <button type="submit" class="btn btn-dark" style="background-color: #6D4511; color: #fff;">

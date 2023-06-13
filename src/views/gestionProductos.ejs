@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Productos</title>
+  <link rel="stylesheet" href="../public/Liberia/principal.css"> <!-- Ruta relativa al archivo CSS -->
+</head>
+<body>
+
+  <% include layouts/partials/header.ejs %>
+
+  <div class="container">
+
+    <% include layouts/partials/navbar.EJS %>
+
+    <div class="content">
+      <% if (user.profile == 'Admin') { %>
+        <h2 style="text-align: center; color: #000;">Gestión de Productos: Libros</h2>
+      <% } else { %>
+        <h2 style="text-align: center; color: #000;">Escoge algún libro <%= user.name %> !</h2>
+      <% } %>
+    
+    
+      <% if (user.profile == 'Admin') { %>
+        <h1><a href="/nuevoProduc" style="color: black;">Nuevos Libros a Stock</a></h1>
+      <% } %>
+    
+      <% if (books && books.length > 0) { %>
+        <div class="card-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); grid-gap: 20px;">
+          <% books.forEach(function(book) { %>
+            <div class="card" style="background-color: #333; color: #fff; padding: 20px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+              <h2 style="font-size: 18px; margin-bottom: 10px;"><%= book.titulo %></h2>
+              <p style="margin: 5px 0;">Autor: <%= book.autor %></p>
+              <p style="margin: 5px 0;">Género: <%= book.genero %></p>
+              <p style="margin: 5px 0;">Edición: <%= book.edicion %></p>
+              <p style="margin: 5px 0;">Precio a la venta: <%= book.precio_venta %></p>
+              <p style="margin: 5px 0;">Stock: <%= book.cantidad_stock %></p>
+              <img src="<%= book.image.url %>" alt="Imagen Cloudinary" style="max-width: 100%; height: auto;"> <br>
+              <% if (user.profile == 'Admin') { %>
+                <a href="/editProduct/<%= book._id %>" style="color: #cccaaa; margin-right: 10px;">Editar</a>
+                <a href="/deleteProduct/<%= book._id %>" style="color: #cccaaa; margin-right: 10px;">Eliminar</a>  
+              <% } else { %>
+                <a href="/nuevaCompra/<%= book._id %>" style="color: #cccaaa; margin-right: 10px;">Comprar</a>
+              <% } %>
+              <!-- Agrega aquí los campos adicionales que necesites mostrar en la tarjeta -->
+            </div>
+          <% }) %>
+        </div>
+      <% } else { %>
+        <p style="color: #000;">No se encontraron elementos.</p>
+      <% } %>
+    
+      <!-- Aquí puedes agregar el contenido de la página -->
+    </div>
+    
+    
+    
+
+  </div>
+
+  <% include layouts/partials/footer.ejs %>
+</body>
+</html>

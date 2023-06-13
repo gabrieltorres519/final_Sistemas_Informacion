@@ -1,8 +1,8 @@
 body{ 
-   background: #8B039A;
-   background-image: linear-gradient(rgba(77, 26, 187, 0.7), rgba(147, 127, 216, 0.7)), url(login.jpeg); 
+   background: brown;
+   background-image: linear-gradient(rgba(109, 69, 33, 0.7), rgba(77, 26, 0, 0.7)), url(login.jpeg);
 }
 .bg{
-  background-image: url(login.jpeg);
+  background-image: url(login.jpg);
   background-position: center center;
 }

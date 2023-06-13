@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mis Libros</title>
+  <link rel="stylesheet" href="../public/Liberia/principal.css"> <!-- Ruta relativa al archivo CSS -->
+</head>
+<body>
+
+  <% include layouts/partials/header.ejs %>
+
+  <div class="container">
+
+    <% include layouts/partials/navbar.EJS %>
+    
+
+    <div class="content">
+      <h2 style="text-align: center;">Mis libros</h2>
+      <a href="logout" style="margin-left: 40; margin-top: 10;">LogOut</a>
+      <h6> <%= user.email %> </h6>
+    
+      <% if (libros && libros.length > 0) { %>
+        <div class="card-container" style="display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 20px;">
+          <% libros.forEach(function(libro) { %>
+            <% if (libro.correo == user.email) { %>
+              <div class="card" style="background-color: #333; color: #fff; padding: 20px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                <h2 style="font-size: 18px; margin-bottom: 10px;"><%= libro.titulo %></h2>
+                <p style="margin: 5px 0;">Autor: <%= libro.autor %></p>
+                <p style="margin: 5px 0;">Edicion: <%= libro.edicion %></p>
+                <p style="margin: 5px 0;">Cantidad: <%= libro.cantidad %></p>
+                <p style="margin: 5px 0;">Direccion de Envio: <a style="color: peru;"><%= libro.direccion %></a></p>
+                <a href="/deleteCompra/<%= libro._id %>/<%= libro.titulo %>/<%= libro.cantidad %>" style="color: #cccaaa; margin-right: 10px;">Cancelar Compra</a>
+                <!-- Agrega aquí los campos adicionales que necesites mostrar en la tarjeta -->
+              </div>
+            <% } %>
+          <% }) %>
+        </div>
+      <% } else { %>
+        <p>No se encontraron elementos.</p>
+      <% } %>
+    
+      <!-- Aquí puedes agregar el contenido de la página -->
+    </div>    
+  </div>
+
+  <% include layouts/partials/footer.ejs %>
+</body>
+</html>

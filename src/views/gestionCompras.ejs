@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Productos</title>
+  <link rel="stylesheet" href="../public/Liberia/principal.css"> <!-- Ruta relativa al archivo CSS -->
+</head>
+<body>
+
+  <% include layouts/partials/header.ejs %>
+
+  <div class="container">
+
+    <% include layouts/partials/navbar.EJS %>
+    <h2 style="margin-left: 20px; text-align: center;">Reporte de Compras</h2>
+<br/>
+    <div class="content" style="display: flex; justify-content: center;">
+
+
+
+
+              <% if (compras && compras.length > 0) { %>
+                <div class="card-container">
+                  <% compras.forEach(function(compra) { %>
+                    <div class="card">
+                      <h2><%= compra.proveedor %></h2>
+                      <p>Titulo del libro: <%= compra.titulo %></p>
+                      <p>Autor: <%= compra.autor %></p>
+                      <p>Edicion: <%= compra.edicion %></p>
+                      <p>Precio por unidad: <%= compra.precio_unitario %></p>
+                      <p>Unidades compradas: <%= compra.unidades_compra %></p>
+                      <!-- Agrega aquí los campos adicionales que necesites mostrar en la tarjeta -->
+                    </div>
+                  <% }) %>
+                </div>
+              <% } else { %>
+                <p>No se encontraron elementos.</p>
+              <% } %>
+
+
+
+      <!-- Aquí puedes agregar el contenido de la página -->
+    </div>
+  </div>
+
+  <% include layouts/partials/footer.ejs %>
+</body>
+</html>

@@ -20,6 +20,8 @@ const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
 const morgan = require('morgan');
+const fileUpload = require('express-fileupload');
+
 
 
 // initializations
@@ -34,6 +36,10 @@ app.engine('ejs', engine);
 app.set('view engine', 'ejs');
 
 // middlewares
+app.use(fileUpload({
+  useTempFiles:true,
+  tempFileDir: './upload', // Crea un carpeta en la que guardaremos la imagen de manera temporal en la raiz del proyecto 
+}))
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended: false}));
 app.use(session({
