@@ -12,12 +12,16 @@
 
     <% include layouts/partials/navbar.EJS %>
     <h2 style="margin-left: 20px; text-align: center;">Reporte de Compras</h2>
+    <p> <br> <br> <br> <br> Total de compras o gastos es <%= totalcompras %> 
+    <br>
+    Total de ventas o ingresos es <%= totalVentas %></p>
 <br/>
     <div class="content" style="display: flex; justify-content: center;">
 
 
 
 
+ 
               <% if (compras && compras.length > 0) { %>
                 <div class="card-container">
                   <% compras.forEach(function(compra) { %>
@@ -28,6 +32,8 @@
                       <p>Edicion: <%= compra.edicion %></p>
                       <p>Precio por unidad: <%= compra.precio_unitario %></p>
                       <p>Unidades compradas: <%= compra.unidades_compra %></p>
+                      <a href="/deleteCompra/<%= compra._id %>" style="color: #cccaaa; margin-right: 10px;">Eliminar</a>
+
                       <!-- Agrega aquí los campos adicionales que necesites mostrar en la tarjeta -->
                     </div>
                   <% }) %>

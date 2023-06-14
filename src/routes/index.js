@@ -69,7 +69,7 @@ router.post('/nuevaCompra',isAuthenticated, async(req,res,next)=>{
   console.log('Se muestra el objeto que se envía');
   console.log(req.body);
   const encontrado = await libros.find({titulo: req.body.titulo});
-
+  const precioLibro = req.body.precio
 
 
   let venta = new ventas();
@@ -80,6 +80,7 @@ router.post('/nuevaCompra',isAuthenticated, async(req,res,next)=>{
   venta.cantidad = req.body.cantidad;
   venta.tarjeta = req.body.tarjeta;
   venta.direccion = req.body.direccion;
+  venta.precio = req.body.precio;
 
   console.log('1111_________________________________________________________________________________________________')
 
@@ -146,12 +147,35 @@ router.get('/gestProd',isAuthenticated, async (req, res, next) => {
 
 router.get('/gestComp',isAuthenticated, async(req,res,next)=>{
   const miscompras =  await compras.find();
+  const misventas =  await ventas.find();
+
+  let sum = 0;
+  let sum2 = 0;
+
+  miscompras.forEach(compra => {
+    sum = sum + compra.precio_unitario*compra.unidades_compra;
+  });
+
+  misventas.forEach((venta)=>{
+    sum2 = sum2 + venta.cantidad*venta.precio
+  })
+
+  
 
   res.render('gestionCompras',{
     //cursosUsuario: [cursosUsuario]
-    'compras': miscompras
+    'compras': miscompras,
+    'totalcompras': sum,
+    'totalVentas': sum2
   });
-})
+}) 
+
+router.get('/deleteCompra/:id',isAuthenticated,async(req,res)=>{
+  const {id} = req.params
+  await compras.findByIdAndDelete(id,req.body)
+    
+  res.redirect('/gestComp')
+});
 
 router.get('/nuevoProduc',isAuthenticated, async(req, res, next) => {
   const provs =  await proveedores.find();

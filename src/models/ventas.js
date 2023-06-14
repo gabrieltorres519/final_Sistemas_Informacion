@@ -7,6 +7,7 @@ const ventasSchema = new Schema({
   autor: String,
   edicion: String,
   cantidad: Number,
+  precio: Number,
   tarjeta: String,
   direccion: String
 });
